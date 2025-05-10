@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 //     secure: false, 
 //     auth: {
 //       user: 'rakeshbarikquotus@gmail.com', 
-//       pass: 'Rakesh@quotus' 
+//       pass: '' 
 //     }
 //   });
 
