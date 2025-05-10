@@ -16,6 +16,7 @@ async function receiveTasks() {
   await ch.assertQueue(RETRY_QUEUE, {
     durable: true,
     deadLetterExchange: "",
+    //this setup will send the message back to main queue
     deadLetterRoutingKey: MAIN_QUEUE,
     messageTtl: 5000, // Wait 5s before retry
   });

@@ -4,7 +4,7 @@ async function sendEmails() {
   const conn = await amqp.connect('amqp://localhost');
   const ch = await conn.createChannel();
   const queue = 'email_queue';
-  const DLQ_QUEUE = "email_dlq";
+  const DLQ_QUEUE = "email_dlq"; //dead letter queue
   
   await ch.assertQueue(queue, {
     durable: true,
